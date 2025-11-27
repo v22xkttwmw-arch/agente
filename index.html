@@ -46,16 +46,16 @@
 
 			<!-- Banner -->
 				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps. Lots of mother flipping apps.</p>
-						</header>
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+    <div class="content">
+        <header>
+            <h2>Agencia de Automatización IA</h2>
+            <p id="typewriter"></p> Transformamos tu empresa con<br />
+            Chatbots Inteligentes y Flujos Automatizados.</p>
+        </header>
+        <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+    </div>
+    <a href="#one" class="goto-next scrolly">Next</a>
+</section>
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
@@ -214,4 +214,20 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script>
+    const text = "Transformamos tu empresa con Chatbots Inteligentes y Flujos Automatizados.";
+    const speed = 50; // Velocidad de escritura en milisegundos
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typewriter").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    
+    // Iniciar cuando carga la página
+    window.onload = typeWriter;
+</script>
 </html>
